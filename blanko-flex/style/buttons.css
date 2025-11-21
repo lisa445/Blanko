@@ -1,0 +1,22 @@
+.buttons{
+    padding: 12px 32px;
+    font-size: 16px;
+    border-radius: 6px;
+    border:none;
+    cursor: pointer;
+}
+
+.header_nav button{
+    background: var(--orange);
+    color: black;
+}
+.header_buttons button:first-child{
+    background: black;
+    color: white;
+    margin-right: 8px;
+}
+.header_buttons button:last-child, .footer_logo button{
+    color: black;
+    background: white;
+}
+

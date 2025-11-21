@@ -1,0 +1,224 @@
+*{
+    box-sizing: border-box;
+}
+body, h1, h2, h3, h4, h5, h6, a, p{
+    margin: 0;
+}
+
+/*Общие свойства*/
+.header_nav,.main_header, .header_description, .main_advantages,.advantage, .slaider, .main_slaider, .footer_quote, .Landing_pages, .cards, footer, .footer_logo, .footer_nav, .footer_created_by, .created_by{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*Шрифты*/
+.header_button,.main_header h1, .advantage h2, .footer_quote p, .landing_card h3, .Landing_pages h2{
+    font-family: 'RobotoB', sans-serif;
+    font-weight: 700;
+}
+.mail_nav, nav a, .main_header p, .advantage p, .quote, .footer_quote a, .footer_created_by{
+    font-family: 'RobotoR', sans-serif;
+    font-weight: 400;
+}
+/*Шапка сайта*/
+.header_nav{
+    background: black;
+    height: 80px;
+}
+.mail_nav, nav a, footer a, .footer_created_by a{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.header_nav nav{
+    margin-left: 444px;
+}
+
+nav a{
+    margin-right: 20px;
+}
+nav a:last-child{
+    margin-right: 0;
+}
+.mail_nav{
+    background-color: rgba(255, 255, 255, 0.12);
+    border-radius: 4px;
+    padding: 4px 8px;
+}
+
+nav a:hover, .mail_nav:hover, .footer_created_by a:hover, .footer_media a:hover{
+    color: rgb(197, 197, 197);
+}
+
+.header_nav img, .header_nav nav{
+    margin-right: 65px;
+}
+
+/*Изображение шапки*/
+.main_header{
+    background: var(--orange);
+}
+.header_description{
+    margin-right: 230px;
+    width:630px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.main_header h1{
+    font-size: 72px;
+    margin-bottom: 27px;
+}
+.main_header p{
+    font-size: 18px;
+    margin-bottom: 22px;
+}
+
+.header_buttons button{
+    padding-top: 20px;
+    padding-bottom: 20px;
+} 
+
+/*Достоинства_Blanko*/
+.main_advantages{
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.advantage img{
+    margin-right: 24px;
+}
+.advantage h2{
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+.advantage p{
+    font-size: 16px;
+}
+.advantage{
+    width: 416px;
+    margin-right: 16px;
+}
+
+/*Слайдер, но пока просто блок*/
+.main_slaider{
+    background: black;
+}
+.slaider{
+    width: 700px;
+    color: white;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.slaider footer{
+    flex-direction: column;
+}
+
+.quote{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.footer_quote p{
+    font-size: 18px;
+}
+.footer_quote a{
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/*Landing_card*/
+
+.landing_card{
+    width: 420px;
+    border: 1px solid grey;
+    border-radius: 6px;
+    margin-right: 16px;
+}
+
+.landing_card:last-child{
+    margin-right: 0;
+}
+.landing_card div{
+    background: black;
+    padding-top: 40px;
+    padding-right: 40px;
+    padding-left: 40px;
+    border-radius: 5px ;
+}
+
+.landing_card h3{
+    margin-top: 24px;
+    margin-bottom: 24px;
+    margin-left: 32px;
+}
+.Landing_pages{
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.Landing_pages h2{
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+/*Footer*/
+hr{
+    width: 1200px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    margin-top: 28px;
+}
+
+footer{
+    background: black;
+    flex-direction: column;
+}
+
+.footer_media a{
+    background-color: rgba(255, 255, 255, 0.12);
+    border-radius: 1px;
+    padding: 17px;
+    margin-right: 8px;
+}
+.footer_media a:last-child{
+    margin-right: 0;
+}
+
+.footer_logo, .footer_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.footer_logo{
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.footer_creators{
+    display: flex;
+}
+.footer_created_by{
+    font-size: 16px;
+    color: white;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.created_by p, .created_by{
+    margin-right: 12px;
+}
+
+.created_by:last-child{
+    margin-right: 0;
+}
