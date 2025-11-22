@@ -1,3 +1,36 @@
-:root{
-    --orange: #FF7143;
+@font-face {
+    font-family: 'RobotoB';
+    src: url('../Roboto/static/Roboto-Bold.ttf') format('ttf');
 }
+@font-face {
+    font-family: 'RobotoL';
+    src: url('../Roboto/static/Roboto-Light.ttf') format('ttf');
+}
+@font-face {
+    font-family: 'RobotoT';
+    src: url('../Roboto/static/Roboto-Thin.ttf') format('ttf');
+}
+@font-face {
+    font-family: 'RobotoM';
+    src: url('../Roboto/static/Roboto-Medium.ttf') format('ttf');
+}
+
+:root{
+    /*Color*/
+    --orange: #FF7143;
+    --dark-orange: #de3800;
+    --gray: rgba(255, 255, 255, 0.12);
+    --soft-gray: rgb(197, 197, 197);
+    --extra-soft-gray: rgba(255, 255, 255, 0.7);
+    /*Fonts*/
+    --RobotoB: 'RobotoB', sans-serif;
+    --RobotoL: 'RobotoL', sans-serif;
+    --RobotoT: 'RobotoT', sans-serif;
+    --RobotoM: 'RobotoM', sans-serif;
+    /*Animation*/
+    --button-animation: background .5s ease;
+    --size-transform: scale(1.05);
+    --link-animation: color .5s ease;
+    --button-transform: transform .5s ease;
+}
+

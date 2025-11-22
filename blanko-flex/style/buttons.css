@@ -1,5 +1,10 @@
+/*Buttons*/
 .buttons{
-    padding: 12px 32px;
+    font-family: var(--RobotoB);
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    padding: 20px 32px;
     font-size: 16px;
     border-radius: 6px;
     border:none;
@@ -10,13 +15,47 @@
     background: var(--orange);
     color: black;
 }
-.header_buttons button:first-child{
-    background: black;
+
+.header_nav button, .primary_btn, .secondary_btn{
+    transition: var(--button-animation), var(--button-transform);
+}
+.header_button{
+    padding: 12px 32px;
+}
+.primary_btn{
+    background: rgb(10, 10, 10);
     color: white;
     margin-right: 8px;
 }
-.header_buttons button:last-child, .footer_logo button{
+.secondary_btn{
     color: black;
     background: white;
 }
 
+.header_nav button:hover{
+    background:var(--dark-orange);
+    transform: var( --size-transform);
+}
+.secondary_btn:hover{
+    background: var(--soft-gray);
+    transform: var( --size-transform);
+}
+.primary_btn:hover{
+    background: black;
+    transform: var( --size-transform);
+}
+
+/*Links*/
+.mail_nav, nav a, footer a, .footer_created_by a{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+nav a, .mail_nav, .footer_created_by a, .footer_media a{
+    transition: var(--link-animation);
+
+}
+nav a:hover, .mail_nav:hover, .footer_created_by a:hover, .footer_media a:hover{
+    color: var(--soft-gray);
+}

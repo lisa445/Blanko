@@ -1,224 +1,380 @@
 *{
     box-sizing: border-box;
-}
-body, h1, h2, h3, h4, h5, h6, a, p{
-    margin: 0;
+    padding:0;
+    margin:0;
 }
 
-/*Общие свойства*/
-.header_nav,.main_header, .header_description, .main_advantages,.advantage, .slaider, .main_slaider, .footer_quote, .Landing_pages, .cards, footer, .footer_logo, .footer_nav, .footer_created_by, .created_by{
+.logo_info,.header_nav, .navigation, .main_header, .header_description, .header_buttons{
     display: flex;
-    justify-content: center;
     align-items: center;
 }
-
-
-/*Шрифты*/
-.header_button,.main_header h1, .advantage h2, .footer_quote p, .landing_card h3, .Landing_pages h2{
-    font-family: 'RobotoB', sans-serif;
-    font-weight: 700;
+/*Header*/
+.burger{
+    display:none;
 }
-.mail_nav, nav a, .main_header p, .advantage p, .quote, .footer_quote a, .footer_created_by{
-    font-family: 'RobotoR', sans-serif;
-    font-weight: 400;
-}
-/*Шапка сайта*/
 .header_nav{
     background: black;
-    height: 80px;
+    padding: 16px 240px;
+    justify-content: space-between;
 }
-.mail_nav, nav a, footer a, .footer_created_by a{
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
+
+.header_description h1,.advantage_desc h2,.footer_quote p, .Landing_pages h2, .landing_card h3{
+    font-family: var(--RobotoB);
+    font-weight:700;
+}
+.mail_nav, nav a, .header_description p, .advantage_desc p, .quote, .footer_quote a, .created_by p,  .footer_created_by a{
+    font-family: var(--RobotoM);
+    font-weight: 400;
+}
+.mail_nav, nav a{
     font-size: 16px;
 }
-
-.header_nav nav{
-    margin-left: 444px;
+.logo_info img{
+    margin-right:65px
 }
-
+.mail_nav{
+    line-height: 24px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background: var(--gray);
+}
+nav{
+    margin-right: 65px;
+}
 nav a{
     margin-right: 20px;
 }
 nav a:last-child{
     margin-right: 0;
 }
-.mail_nav{
-    background-color: rgba(255, 255, 255, 0.12);
-    border-radius: 4px;
-    padding: 4px 8px;
-}
 
-nav a:hover, .mail_nav:hover, .footer_created_by a:hover, .footer_media a:hover{
-    color: rgb(197, 197, 197);
-}
-
-.header_nav img, .header_nav nav{
-    margin-right: 65px;
-}
-
-/*Изображение шапки*/
+/*header_img*/
 .main_header{
     background: var(--orange);
+    justify-content: center;
+    padding: 0 240px;
 }
+
 .header_description{
-    margin-right: 230px;
-    width:630px;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    padding: 0 22px;
+    margin-right: 60px;
 }
-.main_header h1{
+.header_description h1{
+    
     font-size: 72px;
+    line-height: 72px;
+    font-weight: 700;
     margin-bottom: 27px;
 }
-.main_header p{
+.header_description p{
+    width: 580px;
     font-size: 18px;
+    line-height: 27px;
     margin-bottom: 22px;
+    text-align: center;
 }
-
-.header_buttons button{
-    padding-top: 20px;
-    padding-bottom: 20px;
-} 
-
-/*Достоинства_Blanko*/
-.main_advantages{
-    margin-top: 80px;
-    margin-bottom: 80px;
+.header_buttons button:first-child{
+    margin-right: 8px;
+}
+/*advantages*/
+.advantage{
+    display: flex;
 }
 .advantage img{
     margin-right: 24px;
 }
-.advantage h2{
+.advantage_desc{
+    width: 250px;
+}
+.advantage_desc h2{
     font-size: 24px;
-    margin-bottom: 12px;
+    line-height: 32px;
+    margin-bottom: 13px;
 }
-.advantage p{
+.advantage_desc p{
     font-size: 16px;
+    line-height: 24px;
 }
-.advantage{
-    width: 416px;
-    margin-right: 16px;
+.main_advantages{
+    padding: 80px 140px;
+    display: grid;
+    grid-template-rows: repeat(1,auto);
+    grid-template-columns: repeat(3,auto);
+    column-gap: 16px;
 }
 
-/*Слайдер, но пока просто блок*/
+/*main_slaider*/
+
 .main_slaider{
     background: black;
+    display: flex;
+    justify-content: center;
+    padding: 100px 0;
 }
-.slaider{
-    width: 700px;
-    color: white;
-    flex-direction: column;
-    margin-top: 100px;
-    margin-bottom: 100px;
-}
-.slaider footer{
-    flex-direction: column;
-}
-
 .quote{
-    font-size: 40px;
-    text-align: center;
-    margin-top: 40px;
+    color: white;
+    font-size:40px;
+    line-height: 48px;
     margin-bottom: 40px;
+    margin-top:40px;
 }
 .footer_quote p{
-    font-size: 18px;
+    color: white;
+    font-size:18px;
+    line-height: 27px;
+}
+.slaider{
+    display: flex;
+    width: 610px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 .footer_quote a{
     font-size: 16px;
-    color: rgba(255, 255, 255, 0.7);
+    line-height: 24px;
+    color:var(--extra-soft-gray);
 }
-
-/*Landing_card*/
-
-.landing_card{
-    width: 420px;
-    border: 1px solid grey;
-    border-radius: 6px;
-    margin-right: 16px;
-}
-
-.landing_card:last-child{
-    margin-right: 0;
-}
-.landing_card div{
-    background: black;
-    padding-top: 40px;
-    padding-right: 40px;
-    padding-left: 40px;
-    border-radius: 5px ;
-}
-
-.landing_card h3{
-    margin-top: 24px;
-    margin-bottom: 24px;
-    margin-left: 32px;
-}
+/*Landing pages*/
 .Landing_pages{
-    flex-direction: column;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    padding: 100px 200px;
 }
-
 .Landing_pages h2{
-    font-size: 40px;
+    align-self: flex-start;
+    font-size:40px;
+    line-height: 48px;
     margin-bottom: 25px;
 }
-
-/*Footer*/
-hr{
-    width: 1200px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    margin-top: 28px;
+.landing_card{
+    display:flex;
+    flex-direction: column;
+    border-radius:6px;
+    border: 1px solid gray;
+}
+.landing_card h3{
+    font-size: 20px;
+    line-height: 28px;
+    padding: 24px 32px;
+}
+.landing_img{
+    width: 100%;
+    object-fit: contain;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+.cards{
+    display:grid;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(2,auto);
+    gap: 16px;
 }
 
+/*footer*/
 footer{
     background: black;
-    flex-direction: column;
+    padding: 60px 200px 30px 200px;
 }
-
-.footer_media a{
-    background-color: rgba(255, 255, 255, 0.12);
-    border-radius: 1px;
-    padding: 17px;
-    margin-right: 8px;
-}
-.footer_media a:last-child{
-    margin-right: 0;
-}
-
-.footer_logo, .footer_nav {
+.footer_logo, .footer_nav, .footer_created_by{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    max-width: 1200px;
 }
-
 .footer_logo{
-    padding-top: 70px;
-    padding-bottom: 70px;
+    margin-bottom: 60px;
 }
-
-.footer_creators{
-    display: flex;
-}
-.footer_created_by{
-    font-size: 16px;
-    color: white;
-    width: 100%;
-    max-width: 1200px;
-    justify-content: space-between;
-    margin-top: 30px;
+.footer_nav{
     margin-bottom: 30px;
 }
-.created_by p, .created_by{
+.footer_logo button{
+    padding: 12px 32px;
+    font-size: 16px;
+}
+.footer_nav nav{
+    margin-right:0;
+}
+.footer_media a{
+    padding: 17px;
+    background: var(--gray);
+    margin-right: 8px;
+}
+.footer_media a:last-child{
+    margin-right: 0px;
+}
+hr{
+   opacity: .5;
+}
+.footer_creators, .created_by{
+    display: flex;
+    align-items: center;
+}
+.created_by{
     margin-right: 12px;
 }
-
 .created_by:last-child{
     margin-right: 0;
+}
+.created_by p{
+    color:white;
+    font-size: 16px;
+    line-height: 24px;
+    margin-right: 12px;
+}
+.footer_created_by{
+    margin-top: 24px;
+}
+
+@media(max-width:320px){
+    /*Header*/
+    .header_nav{
+        padding: 12px 16px;
+    }
+    .mail_nav, .header_navigation, .header_button{
+        display:none;
+    }
+    .burger{
+        display: initial;
+    }
+    .logo_info img{
+        margin-right:0;
+    }
+    /*header_img*/
+    .main_header{
+        padding: 48px 16px;
+    }
+    .main_header img{
+        display: none
+    }
+    .header_description{
+        margin-right: 0;
+        padding: 0;
+    }
+    .header_description h1{
+        font-size: 48px;
+        line-height: 100%;
+        margin-bottom: 16px;
+        text-align: center;
+    }
+    .header_description p{
+        width: 100%;
+        margin-bottom: 24px;
+    }
+    .header_buttons{
+        flex-direction: column;
+    }
+    .header_buttons button{
+        font-size: 16px;
+    }
+    .header_buttons button:first-child{
+        padding: 12px 72px;
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+    .header_buttons button:last-child{
+        padding: 12px 82px;
+    }
+
+    /*advantages*/
+    .main_advantages{
+        padding: 80px 16px;
+        grid-template-rows: repeat(3,auto);
+        grid-template-columns: repeat(1,auto);
+        column-gap:0;
+        row-gap: 48px;
+    }
+    .advantage_desc{
+        width: 100%;
+    }
+    .advantage, .advantage_desc{
+        flex-direction: column;
+    }
+    .advantage img{
+        width:50px;
+        height:50px;
+        margin-right: 0px;
+        margin-bottom:16px;
+    }
+    .advantage_desc h2{
+        margin-bottom: 8px;
+    }
+
+    /*main_slaider*/
+    .main_slaider{
+        padding: 32px 16px;
+    }
+    .quote{
+        font-size: 20px;
+        line-height: 140%;
+        margin-top:24px;
+        margin-bottom:24px;
+    }
+    .footer_quote p{
+        font-size:16px;
+    }
+    .footer_quote a{
+        font-size: 14px;
+    }
+    /*Landing pages*/
+    .Landing_pages{
+        padding: 80px 16px;
+    }
+    .Landing_pages h2{
+        margin-bottom: 32px;
+    }
+    .cards{
+        grid-template-columns: repeat(1,auto);
+        grid-template-rows: repeat(4,auto);
+        column-gap: 0;
+        row-gap: 16px;
+    }
+    .landing_card h3{
+        padding: 24px 16px;
+    }
+    /*footer*/
+    footer{
+        padding: 12px 16px 32px 16px;
+    }
+    .footer_nav nav a{
+        display: initial
+    }
+    .footer_logo, .footer_nav{
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    
+    .footer_logo button{
+        width:100%;
+        margin-top: 32px;
+    }
+    .footer_navigation{
+        display: flex;
+        flex-wrap:wrap;
+    }
+    .footer_navigation a{
+        margin-right: 24px;
+        margin-bottom: 24px;
+    }
+    .footer_navigation a:nth-child(3){
+        margin-right: 0;
+    }
+    .footer_navigation a:last-child{
+        margin-right: 0;
+        margin-bottom: 32px;
+    }
+    hr{
+        display:none;
+    }
+    
+    .footer_creators, .footer_created_by{
+        flex-direction:column;
+        align-items: flex-start;
+    }
+    .created_by:first-child{
+        margin-right: 0;
+        margin-bottom: 12px;
+    }
+    .footer_creators{
+        margin-bottom: 32px;
+    }
 }
